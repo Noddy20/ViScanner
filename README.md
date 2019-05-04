@@ -1,4 +1,4 @@
-[![Build Status](https://img.shields.io/badge/build-1.0-brightgreen.svg)](https://github.com/Noddy20/ViScanner/)
+[![Build Status](https://img.shields.io/badge/build-1.0-brightgreen.svg)](https://github.com/Noddy20/ViScanner/)  [![API](https://img.shields.io/badge/API-17%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=17)
 
 #ViScanner
 
