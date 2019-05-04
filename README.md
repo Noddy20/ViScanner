@@ -7,7 +7,7 @@ ViScanner allows you to scan Url's and File Hashes for malware/viruses etc. usin
 ##Gradle
 
 ```
-implementation com.viscanner.app
+implementation 'com.github.Noddy20:ViScanner:1.+'
 ```
 
 ##Sample App
