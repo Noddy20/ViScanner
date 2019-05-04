@@ -1,24 +1,24 @@
 [![Build Status](https://img.shields.io/badge/build-1.0-brightgreen.svg)](https://github.com/Noddy20/ViScanner/)  [![API](https://img.shields.io/badge/API-17%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=17)
 
-#ViScanner
+# ViScanner
 
 ViScanner allows you to scan Url's and File Hashes for malware/viruses etc. using VirusTotal API.
 
-##Gradle
+## Gradle
 
 ```
 implementation 'com.github.Noddy20:ViScanner:1.+'
 ```
 
-##Sample App
+## Sample App
 
 Check out the [Sample App](https://github.com/Noddy20/ViScanner/app/)
 
-##Usage
+## Usage
 
 Add above dependency and sync your project, and get your VirusTotal API key.
 
-###VirusTotal API KEY
+### VirusTotal API KEY
 
 ViScanner uses VirusTotal API, which requires an API key. To get the API key you must sign up to [VirusTotal Community](https://www.virustotal.com/#/join-us). Once you have a valid VirusTotal Community account you will find your personal API key in your personal settings section.
 
@@ -29,14 +29,14 @@ The VirusTotal API must not be used in commercial products or services, it can n
 
 Under all circumstances VirusTotal's [Terms of Service](https://support.virustotal.com/hc/en-us/articles/115002145529-Terms-of-Service) and [Privacy Policy](https://support.virustotal.com/hc/en-us/articles/115002168385-Privacy-Policy) must be respected.
 
-###Initialize
+### Initialize
 
 ```
 String apiKey = "Your_API_Key";
 ViScanBuilder viScanBuilder = new ViScanBuilder(getApplicationContext(), apiKey);
 ```
 
-###Callbacks
+### Callbacks
 
 When a scan is completed for single item, all items and when a scan fails you can listen to these callbacks by ScanListener -
 
@@ -86,8 +86,47 @@ String jsonResult : Complete scan result in Json format (Visit [VirusTotal API D
 
 scanFinalResult : result of all items scanned.
 
+### Scan Urls
 
-#License
+Important - always start on scan after the previous one is completed.
+
+Scan single url -
+
+```
+viScanBuilder.scanUrls("https://www.google.com");
+```
+
+Scan multiple url -
+
+```
+List<String> urls = new ArrayList<>();
+urls.add("www.google.com");
+urls.add("www.youtube.com");
+urls.add("www.facebook.com");
+urls.add("www.blogger.net");
+urls.add("www.amazon.com");
+viScanBuilder.scanUrls(urls);
+```
+
+### Scan Files
+
+Scan single file - 
+
+```
+viScanBuilder.scanUrls("YOUR_FILE_PATH"); 
+```
+
+Scan multiple files -
+
+```
+List<String> filePaths = new ArrayList<>();
+filePaths.add("FILE1_PATH");
+filePaths.add("FILE2_PATH");
+filePaths.add("FILE3_PATH");
+viScanBuilder.scanUrls(filePaths);
+```
+
+# License
 
 Under all circumstances VirusTotal's [Terms of Service](https://support.virustotal.com/hc/en-us/articles/115002145529-Terms-of-Service) and [Privacy Policy](https://support.virustotal.com/hc/en-us/articles/115002168385-Privacy-Policy) must be respected.
 
