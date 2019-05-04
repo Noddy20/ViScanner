@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.viscanner.viscanner2" >
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application >
+        <service
+            android:name=".ScannerService"
+            android:enabled="true" />
+    </application>
+</manifest>
+

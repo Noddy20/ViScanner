@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ViScanner</string>
+
+    <string name="empty_urls">No Url Found!</string>
+    <string name="empty_file_paths">No File Found!</string>
+    <string name="grant_storage_perm">Grant Storage Permission!</string>
+    <string name="scan_running">Previous Scan Still Running!</string>
+</resources>
